@@ -1,20 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Welcome from "./pages/Welcome";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
+import "./App.css";
 
-function App() {
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Simple Portal
-        </p>
-
-          React Hooks
-      </header>
-    </div>
+  <Router>
+        <Switch>
+          <Route path="/" exact component={Welcome} />
+        </Switch>
+    </Router>
   );
-}
-
-export default App;
+};
